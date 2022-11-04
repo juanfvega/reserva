@@ -17,9 +17,9 @@ class DatabaseManager():
 
         self.addTable("Customer", getCustomer(self.db))
         self.addTable("CreditCard", getCreditCard(self.db))
-        self.addTable("getMenu", getMenu(self.db))
-        self.addTable("getTable", getTable(self.db))
-        self.addTable("getTicket", getTicket(self.db))
+        self.addTable("Menu", getMenu(self.db))
+        self.addTable("Table", getTable(self.db))
+        self.addTable("Ticket", getTicket(self.db))
         
         self.db.generate_mapping(create_tables=True)
 
