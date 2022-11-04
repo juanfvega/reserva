@@ -1,8 +1,7 @@
 from pony.orm import *
 
-db = Database()
 
-def getCustomer():
+def getCustomer(db):
 
     class Customer(db.Entity):
         id = PrimaryKey(int, auto=True)

@@ -1,8 +1,8 @@
 from pony.orm import *
 
-db = Database()
 
-def getTicket():
+
+def getTicket(db):
 
     class Ticket(db.Entity):
         id = PrimaryKey(int, auto=True)

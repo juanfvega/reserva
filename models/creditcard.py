@@ -1,9 +1,8 @@
 from pony.orm import *
 from datetime import date
 
-db = Database()
 
-def getCreditCard():
+def getCreditCard(db):
     
     class CreditCard(db.Entity):
         id = PrimaryKey(int, auto=True)

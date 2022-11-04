@@ -1,9 +1,9 @@
 from datetime import date
 from pony.orm import *
 
-db = Database()
 
-def getTable():
+def getTable(db):
+
     class Table(db.Entity):
         id = PrimaryKey(int, auto=True)
         date = Optional(date)
