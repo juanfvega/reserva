@@ -10,11 +10,13 @@ class Table(BaseModel):
     status:bool
 
 
+
+
 @tableRouter.get("/")
 async def greet():
     return "hello table"
 
 
-@tableRouter.post("/create")
-async def create_table(data:Table):
-    return createTable(date=data.date, status=data.status)
+@tableRouter.post("/create/{customerId}")
+async def create_table(data:Table, customerId:int):
+    return createTable(date=data.date, status=data.status, customerId=customerId)
