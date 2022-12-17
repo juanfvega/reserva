@@ -7,9 +7,7 @@ from services.customer import updateCustomer
 from services.customer import deleteCustomer
 
 
-
 customerRouter = APIRouter(prefix="/customer")
-
 
 class Customer(BaseModel):
     name:Union[str, None] = None
